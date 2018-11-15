@@ -11,8 +11,6 @@ auth = HTTPBasicAuth()
 engine = create_engine('sqlite:///bagelShop.db')
 
 Base.metadata.bind = engine
-DBSession = sessionmaker(bind=engine)
-session = DBSession()
 app = Flask(__name__)
 
 # Added @auth.verify_password here
